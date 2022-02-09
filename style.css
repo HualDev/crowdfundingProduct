@@ -32,7 +32,7 @@ nav{
     padding: 30px 20px;
 }
 
-.right ul{    
+.menuMobile{    
     position: absolute;
     background-color: white;
     margin: auto;
@@ -57,11 +57,15 @@ nav{
     width: 100%;
 }
 
-#hamburger{
+.close{
     display: block;
 }
 
-#closeMenu{
+.hamburger{
+    display: block;
+}
+
+.closeMenu{
     display: none;
 }
 
@@ -116,11 +120,23 @@ nav{
     color: white;
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
+
+.back:hover{
+    background-color: var(--darkCyan);    
 }
 
 .icono{
     border: none;
-    background-color: transparent;    
+    background-color: transparent;
+    cursor: pointer;    
+}
+
+.icono:hover{
+    color: var(--darkCyan);
+    font-weight: 900;
 }
 
 .bookmark{
@@ -239,7 +255,25 @@ hr{
     color: white;
     font-size: 14px;
     font-weight: 600;
-    margin: 20px 0;    
+    margin: 20px 0;
+    cursor: pointer;    
+}
+
+.card button:hover{
+    background-color: var(--darkCyan);
+}
+
+.mahogany{
+    opacity: 0.5;
+}
+
+.mahogany button{
+    background-color: var(--darkGray);
+    pointer-events: none;
+}
+
+.action button{
+    cursor: pointer;
 }
 
 .modal{
@@ -266,6 +300,10 @@ hr{
     width: 20px;
     height: 20px;
     margin: 10px 0 0;
+}
+
+#closeModal{
+    cursor: pointer;
 }
 
 .tittle h1{
@@ -299,6 +337,10 @@ hr{
     font-size: medium;
     font-weight: 600;
     margin: 0;
+}
+
+.valor{
+    display: none;
 }
 
 .radio{
@@ -340,6 +382,10 @@ hr{
     text-align: center;
     font-size: 18px;
     font-weight: 500;
+}
+
+.valor input[type=button]{
+    cursor: pointer;
 }
 
 .plan input[type=number]{
@@ -437,6 +483,10 @@ hr{
         display: none;
     }
 
+    .cMenu{
+        display: none;
+    }
+
     .right hr{
         display: none;
     }
@@ -460,8 +510,8 @@ hr{
 
     .buttons img{
         width: 30px;
-        height: 30px;
-    }
+        height: 30px;        
+    }    
 
     .back{
         padding: 5px 10px;
@@ -474,6 +524,7 @@ hr{
         border-radius: 30px;
         display: flex;
         align-items: center;
+        color: var(--darkGray); 
     }
 
     .bookmark{
@@ -481,7 +532,7 @@ hr{
        padding: 0 15px;
        font-size: 10px;
        font-weight: 600;
-       color: var(--darkGray); 
+       
     }
 
     .prices{
@@ -510,6 +561,14 @@ hr{
 
     .prices p{
         font-size: 12px;
+    }
+
+    .line{
+        height: 7px;
+    }
+
+    .line hr{
+        height: 7px;
     }
 
     .project{
