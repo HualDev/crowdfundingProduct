@@ -13,6 +13,11 @@ body{
     margin: 0;    
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; }
+input[type=number] { -moz-appearance:textfield; }  
+
 main{
     background-color: whitesmoke;
     font-family: 'Commissioner', sans-serif;
@@ -51,6 +56,7 @@ nav{
     padding: 15px;
     font-size: 18px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .right hr{
@@ -111,6 +117,10 @@ nav{
     justify-content: center;    
 }
 
+input:focus{
+    outline-color: var(--darkCyan);
+}
+
 .back{
     width: 200px;
     padding: 20px 35px;
@@ -151,12 +161,25 @@ nav{
     padding: 0 0 20px;
 }
 
-.prices h1{
+.backedCenter{
+    display: block;
+    margin: auto;
+}
+
+.backedDolar{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.nBacked{
     text-align: center;
     padding: 30px 0 10px;
     font-size: 35px;
     font-weight: 900;
     margin: 0 auto;
+    background-color: transparent;
+    border: none;    
 }
 
 .prices p{
@@ -235,10 +258,17 @@ hr{
 
 .number{
     display: inline;
-    color: black !important;
-    opacity: 1 !important;
-    font-size: 32px !important;
-    font-weight: 900 !important;
+    color: black ;
+    opacity: 1;
+    font-size: 32px;
+    font-weight: 900;
+    background-color: transparent;
+    border: none;
+}
+
+.actionCenter{
+    display: flex;
+    align-items: center;
 }
 
 .left{
@@ -263,14 +293,6 @@ hr{
     background-color: var(--darkCyan);
 }
 
-.mahogany{
-    opacity: 0.5;
-}
-
-.mahogany button{
-    background-color: var(--darkGray);
-    pointer-events: none;
-}
 
 .action button{
     cursor: pointer;
@@ -286,6 +308,10 @@ hr{
     margin: auto;
     border-radius: 20px;
     display: none;
+}
+
+.modalNumber{
+    background-color: transparent;
 }
 
 .tittle{
@@ -345,14 +371,22 @@ hr{
 
 .radio{
     display: flex;
+    justify-content: space-between;
+}
+
+.subRadio{
+    display: flex;
+}
+
+.menuLeft{
+    display: none;
 }
 
 .boton{
     margin: 10px 10px 0 0;
     width: 30px;
     height: 30px;
-    border: 0;
-    background: aqua;
+    border: 0;    
 }
 
 .pledgeNoR {
@@ -360,7 +394,7 @@ hr{
     align-items: center;
 }
 
-.boton:checked{
+.boton::after{
     background-color: aqua;
 }
 
@@ -402,7 +436,7 @@ hr{
     font-weight: 800;
 }
 
-.plan input[type=button]{
+.continue{
     width: 45%;
     height: 55px;
     border-radius: 30px;
@@ -420,7 +454,7 @@ hr{
     left: 0;
     right: 0;
     top: 150px;
-    display: none;
+    display: none;    
 }
 
 .completedModal img{
@@ -452,6 +486,11 @@ hr{
     background-color: var(--moderateCyan);
     color: white;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.completedModal button:hover{
+    background-color: var(--darkCyan);
 }
 
 @media(min-width:600px){
@@ -544,7 +583,7 @@ hr{
     .numbers{
         display: flex;
         justify-content: left;
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     .numbers hr{
@@ -557,6 +596,7 @@ hr{
     .prices h1{
         font-size: 20px;
         font-weight: 700;
+        text-align: left;
     }
 
     .prices p{
@@ -565,6 +605,9 @@ hr{
 
     .line{
         height: 7px;
+        margin: 0;
+        margin: 0 30px;
+        width: 90%;
     }
 
     .line hr{
@@ -610,4 +653,76 @@ hr{
         padding: 12px 20px;
         font-size: 11px;
     }
+
+    .modal{
+        width: 50%;
+    }
+
+    .menuLeft{
+        display: flex;       
+    }
+
+    .menuLeft h1{
+        font-size: 12px;
+    }
+
+    .datosRadio{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .datosRadio:hover{
+        color: var(--darkCyan);
+        font-weight: 700;
+    }
+
+    .datosRadio label{
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .pledge{
+        font-weight: 200;
+        font-size: 14px;
+        margin: 0 0 0 10px;
+    }
+
+    .pledge:hover{
+        color: var(--darkCyan);
+        font-weight: 700;
+    }
+
+    .oculto{
+        display: none;
+    }
+
+    .valores{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .enter{
+        font-size: 14px;
+    }
+
+    .valoresDatos{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .plan input[type=number]{
+        width: 120px;
+        margin: 0 10px 0 0;
+    }
+
+    .continue{
+        width: 120px;
+    }
+
+    .completedModal{
+        width: 40%;
+    }
+
 }

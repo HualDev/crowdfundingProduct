@@ -59,7 +59,12 @@
         <div id="prices" class="prices">
           <div class="numbers">
             <div class="backed">
-              <h1>$89,914</h1>
+              <div class="backedDolar">
+                <label for="">$</label>
+                <input class="nBacked" type="button" id="backed" value="89914">
+              </div>
+              
+              <!--<h1>$89,914</h1>-->
               <p>of $100,000 backed</p>
                   
             </div>
@@ -67,7 +72,8 @@
             <hr>
 
             <div class="backed">
-              <h1>5,007</h1>
+              <input type="button" class="nBacked backedCenter" value="5007" id="nBacked">
+              <!--<h1>5,007</h1>-->
               <p>total backers</p>
                   
             </div>
@@ -75,13 +81,14 @@
             <hr>
 
             <div class="backed">
-              <h1>56</h1>
+              <input type="button" class="nBacked backedCenter" value="56">
+              <!--<h1>56</h1>-->
               <p>days left</p>
             </div>
 
           </div>        
               
-          <div class="line"><hr></div>
+          <div class="line"><hr id="hrLine"></div>
         </div>
 
         <div class="project">
@@ -97,7 +104,7 @@
             to allow notepads, pens, and USB sticks to be stored under the stand.
           </p>
 
-          <div class="card">
+          <div id="bambooCard" class="card">
             <div class="cardTittle">
               <h1>Bamboo Stand</h1>
               <h2>Pledge $25 or more</h2>
@@ -108,8 +115,9 @@
               you’ll be added to a special Backer member list.
             </p>
             <div class="action">
-              <div>
-                <p class="number">101</p> 
+              <div class="actionCenter">
+                <input type="button" class="number" value="101" id="bambooLeft">
+                <!--<p class="number">101</p>--> 
                 <p class="left">left</p> 
               </div>            
               <button id="bambooSelect">Select Reward</button>
@@ -117,7 +125,7 @@
                 
           </div>
 
-          <div class="card">
+          <div id="blackCard" class="card">
             <div class="cardTittle">
               <h1>Black Edition Stand</h1>
               <h2>Pledge $75 or more</h2>
@@ -128,8 +136,9 @@
               member list. Shipping is included.
             </p>
             <div class="action">
-              <div>
-                <p class="number">64</p>
+              <div class="actionCenter">
+                <input type="button" class="number" value="64" id="blackLeft">
+                <!--<p class="number">64</p>-->
                 <p class="left">left</p>
               </div>            
               <button id="blackSelect">Select Reward</button>
@@ -137,7 +146,7 @@
                 
           </div>
 
-          <div class="card mahogany">
+          <div id="mahoganyCard" class="card mahogany">
             <div class="cardTittle">
               <h1>Mahogany Special Edition</h1>
               <h2>Pledge $200 or more</h2>
@@ -148,11 +157,12 @@
               to our Backer member list. Shipping is included.
             </p>
             <div class="action">
-              <div>
-                <p class="number">0</p>
+              <div class="actionCenter">
+                <input id="mahoganyLeft" type="button" class="number" value="2">
+                <!--<p class="number">0</p>-->
                 <p class="left">left</p>
               </div>            
-              <button>Out of Stock</button>
+              <button id="mahoganySelect">Select Reward</button>
             </div>
                 
           </div>
@@ -185,10 +195,18 @@
 
         <div id="bamboo" class="bamboo plan">
           <div class="radio">
-            <input id="r2" class="boton" type="radio" name="choose">
-            <div class="datosRadio">
-              <label for="">Bamboo Stand</label>
-              <p class="pledge">Pledge $25 or more</p>
+            <div class="subRadio">
+              <input id="r2" class="boton" type="radio" name="choose">
+              <div class="datosRadio">
+                <label for="">Bamboo Stand</label>
+                <p class="pledge">Pledge $25 or more</p>
+              </div>
+            </div>
+            
+            <div class="menuLeft actionCenter">
+              <input type="button" class="number" value="101" id="mobileBambooLeft">
+              <!--<p class="number">101</p>-->
+              <p class="left">left</p>
             </div>
             
           </div>
@@ -197,23 +215,41 @@
             You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
             you’ll be added to a special Backer member list.
           </p>
-          <p class="number">101</p>
-          <p class="left">left</p>
+          <div class="actionCenter">
+            <input type="button" class="number oculto" value="101" id="mBambooLeft">
+            <!--<p class="number oculto">101</p>-->
+            <p class="left oculto">left</p>
+          </div>
+          
           <div id="bambooValor" class="valor">
             <hr>
-            <p class="enter">Enter your pledge</p>
-            <input id="bambooNumber" type="number" value="25">
-            <input id="bambooContinue" type="button" value="Continue">
+            <div class="valores">
+              <p class="enter">Enter your pledge</p>
+              <div class="valoresDatos">
+                <input id="bambooNumber" type="number" value="25">
+                <input id="bambooContinue" type="button" value="Continue" class="continue">
+              </div>
+              
+            </div>
+            
           </div>
           
         </div>
 
         <div id="black" class="black plan">
           <div class="radio">
-            <input id="r3" class="boton" type="radio" name="choose">
-            <div class="datosRadio">
-              <label for="">Black Edition Stand</label>
-              <p class="pledge">Pledge $75 or more</p>
+            <div class="subRadio">
+              <input id="r3" class="boton" type="radio" name="choose">
+              <div class="datosRadio">
+                <label for="">Black Edition Stand</label>
+                <p class="pledge">Pledge $75 or more</p>
+              </div>
+            </div>
+            
+            <div class="menuLeft actionCenter">
+              <input type="button" class="number" value="64" id="mobileBlackLeft">
+              <!--<p class="number">64</p>-->
+              <p class="left">left</p>
             </div>
           </div>
           
@@ -221,23 +257,44 @@
             You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
             member list. Shipping is included.
           </p>
-          <p class="number">64</p>
-          <p class="left">left</p>
+          <div class="actionCenter">
+            <input type="button" class="number oculto" value="64" id="mBlackLeft">
+            <!--<p class="number oculto">64</p>-->
+            <p class="left oculto">left</p>
+          </div>
+          
           <div id="blackValor" class="valor">
             <hr>
-            <p class="enter">Enter your pledge</p>
-            <input id="blackNumber" type="number" value="75">
-            <input id="blackContinue" type="button" value="Continue">
+            <div class="valores">
+              <p class="enter">Enter your pledge</p>
+              <div class="valoresDatos">
+                <input id="blackNumber" type="number" value="75">
+                <input id="blackContinue" type="button" value="Continue" class="continue">
+              </div>
+              
+            </div>
+            
           </div>
           
         </div>
 
-        <div class="mahogany plan" disabled>
-          <div class="radio">
-            <input class="boton" type="radio" name="choose" disabled>
-            <div class="datosRadio">
-              <label for="">Mahogany Special Edition</label>
-              <p class="pledge">Pledge $200 or more</p>
+        <div id="mahogany" class="mahogany plan">
+          <div  class="radio">
+            <div class="subRadio">
+              <input id="r4" class="boton" type="radio" name="choose" >
+              <div class="datosRadio">
+                <label for="">Mahogany Special Edition</label>
+                <p class="pledge">Pledge $200 or more</p>
+              </div>
+            </div>
+            
+            <div class="menuLeft">
+              <div class="actionCenter">
+                <input id="mMahoganyLeft" type="button" class="number" value="2">
+                <!--<p class="number">0</p>-->
+                <p class="left">left</p>
+              </div>
+              
             </div>
             
           </div>
@@ -246,13 +303,23 @@
             You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
             to our Backer member list. Shipping is included.
           </p>
-          <p class="number">0</p>
-          <p class="left">left</p>
+          <div class="actionCenter">
+            <input id="mobileMahoganyLeft" type="button" class="number oculto" value="2">
+            <!--<p class="number oculto">0</p>-->
+            <p class="left oculto">left</p>
+          </div>
+          
           <div id="mahoganyValor" class="valor">
             <hr>
-            <p class="enter">Enter your pledge</p>
-            <input type="number" value="200">
-            <input type="button" value="Continue">
+            <div class="valores">
+              <p class="enter">Enter your pledge</p>
+              <div class="valoresDatos">
+                <input id="mahoganyNumber" type="number" value="200">
+                <input id="mahoganyContinue" type="button" value="Continue" class="continue">
+              </div>
+              
+            </div>
+            
           </div>
           
         </div>
